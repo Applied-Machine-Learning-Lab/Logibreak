@@ -28,8 +28,8 @@ class LLMCall:
             API_base=""
             self.API_key=""
         elif self.model_name =='v3-api':
-            API_base= ""
-            self.API_key= ""
+            API_base= "https://api.xty.app"
+            self.API_key= "sk-mULoSCceuEKPr9Sc15BaAbE5F09f442cBe8a87DfC540AaFa"
           
 
         self.client = OpenAI(api_key=self.API_key, base_url=API_base)
@@ -124,7 +124,7 @@ class LLMCall:
                 elif self.model_name =='v3-api':
                     response = self.client.chat.completions.create(
                         # model='deepseek-chat',
-                        model = 'deepseek-v3',
+                        model = 'deepseek-v3-250324',
                         messages=messages,
                         temperature=temperature,
                     )
